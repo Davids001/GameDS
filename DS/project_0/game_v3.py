@@ -49,4 +49,4 @@ def game_core_v3(number: int = 1) -> int:
 # возвращаем результат и запускаем программу.
 if __name__ == "__main__":
     # RUN
-    game_core_v3()
+    game_core_v3(2)
