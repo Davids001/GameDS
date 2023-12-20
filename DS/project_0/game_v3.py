@@ -1,4 +1,9 @@
+
 def game_core_v3(number: int = 1) -> int:
+# сделал по умолчанию, если цифру не ввели, компьютер сам рандомно закидывает число.
+    if number == 1:
+        import numpy as np
+        number = np.random.randint(1, 101) 
     """
     Args:
         number (int, optional): Загаданное число. Defaults to 1.
@@ -39,7 +44,9 @@ def game_core_v3(number: int = 1) -> int:
             point_1 = point_0
 # при этом наше новое предположение будет точка, которая находится посредине нового отрезка.            
             point_0 += abs((point_2 - point_0) // 2)
-    print(count)
+    print(count)        
     return count
 # возвращаем результат и запускаем программу.
-game_core_v3(66)
+if __name__ == "__main__":
+    # RUN
+    game_core_v3()
