@@ -1,7 +1,7 @@
 
-def game_core_v3(number: int = 1) -> int:
-# сделал по умолчанию, если цифру не ввели, компьютер сам рандомно закидывает число.
-    if number == 1:
+def game_core_v3(number = None) -> int:
+# Если цифру не ввели, то по умолчанию цифры идут рандомные.
+    if number is None:
         import numpy as np
         number = np.random.randint(1, 101) 
     """
@@ -49,4 +49,4 @@ def game_core_v3(number: int = 1) -> int:
 # возвращаем результат и запускаем программу.
 if __name__ == "__main__":
     # RUN
-    game_core_v3(0)
+    game_core_v3()
